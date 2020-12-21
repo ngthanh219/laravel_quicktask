@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+
+.conponents{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: #fafafa;
+}
+
+.article {
+    margin: 32px auto 0;
+    max-width: 740px;
+    padding-bottom: 32px;
+}
+
+.content {
+    display: flex;
+}
+
+.main-left {
+    width: 30%;
+    background-image: url(../images/login-ins.png);
+    background-position: 0 0;
+    background-size: 454px 618px;
+    flex-basis: 450px;
+    height: 618px;
+    margin-left: -35px;
+    margin-right: -15px;
+}
+
+.images {
+    position: relative;
+    margin: 99px 0 0 151px;
+}
+
+.images.image {
+    height: 427px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 240px;
+    z-index: 9999;
+}
+
+.main-right {
+    width: 325px;
+}
+
+.form-login-instagram {
+    align-items: center;
+    background-color: rgba(var(--d87,255,255,255),1);
+    border: 1px solid rgba(var(--b6a,219,219,219),1);
+    border-radius: 1px;
+    margin: 28px 0 10px;
+    padding: 10px 0;
+}
+
+h1 {
+    margin: 20px auto 12px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.form-container {
+    margin-bottom: 30px;
+    max-width: 350px;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-col {
+    margin-top: 24px;
+}
+
+.form-row {
+    margin: 0 40px 6px;
+}
+
+.row-input {
+    background: rgba(var(--b3f,250,250,250),1);
+    border: 1px solid rgba(var(--ca6,219,219,219),1);
+    border-radius: 3px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    position: relative;
+    width: 100%;
+}
+
+input.text-key {
+    background: rgba(var(--b3f,250,250,250),1);
+    border: 0;
+    flex: 1 0 auto;
+    padding: 9px 8px 7px 8px;
+    text-overflow: ellipsis;
+    outline: none;
+}
+
+.form-row.under-input {
+    margin: 15px 40px 15px 40px;
+}
+
+button {
+    width: 100%;
+    height: 30px;
+    background-color: #2196F3;
+    border: 0;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5fadec;
+}
+
+.option-or {
+    margin: 10px 40px 18px;
+    display: flex;
+}
+
+.option-or .bar1 {
+    flex-grow: 1;
+    flex-shrink: 1;
+    background-color: rgba(var(--b38,219,219,219),1);
+    height: 1px;
+    position: relative;
+    top: .45em;
+}
+
+.error {
+    margin: 10px 40px;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+}
+
+.error p {
+    color: #ed4956;
+}
+
+.option-or .option {
+    color: rgba(var(--f52,142,142,142),1);
+    font-weight: 600;
+    line-height: 15px;
+    margin: 0 18px;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+a.forgot-pw {
+    color: rgba(var(--fe0,0,55,107),1);
+    font-size: 15px;
+    line-height: 14px;
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.sign-up-instagram {
+    -webkit-box-align: center;
+    align-items: center;
+    background-color: rgba(var(--d87,255,255,255),1);
+    border: 1px solid rgba(var(--b6a,219,219,219),1);
+    border-radius: 1px;
+    margin: 0 0 10px;
+    padding: 10px 0;
+}
+
+.box {
+    font-size: 14px;
+    line-height: 18px;
+    margin: -3px 0 -4px;
+}
+
+p.text {
+    font-size: 16px;
+    margin: 15px;
+    text-align: center;
+}
+
+.text a {
+    color: #0095f6;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+}
+
+.footer span {
+    position: fixed;
+    bottom: 10px;
+    text-transform: capitalize;
+    font-size: 16px;
+}
+
+.container-sign-up {
+    background: hsla(0,0%,8%,.85);
+    display: flex;
+    flex-grow: 1;
+    position: absolute;
+    top: 0px;
+    right: 0;
+    width: calc(100% - 0px);
+    height: calc(100%);
+    transform: translateX(100%);
+    transition: transform ease 300ms;
+}
+
+.show {
+    transform: translateX(0%);
+}
+
+.overlay {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    flex: none;
+    background: #000;
+    opacity: 0;
+    transition: opacity ease 200ms;
+}
+
+.content.sign-up {
+    width: 325px;
+    margin: 0 auto;
+    z-index: 9999;
+}
+
+h2 {
+    color: rgba(var(--f52,142,142,142),1);
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 20px;
+    margin: 0 40px 10px;
+    text-align: center;
+}
+

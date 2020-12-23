@@ -16,16 +16,25 @@ class LoginController extends Controller
     public function checkLogin(LoginRequest $request)
     {
         $data = [
-            'email'     =>  $request->email,
-            'password'  =>  $request->password,
+            'email' => $request->email,
+            'password' => $request->password,
         ];
-        // $data['password'] = bcrypt($data['password']);
-        // dd($data['password']);
+        if (Auth::attempt($data, true)) {
+            $request->session()->put('username', $data['email']);
+            $request->session()->flash('infoMessage', trans('user.login_success'));
 
-        if (Auth::attempt($data)) {
-            echo('ok');
+            return redirect()->route('user.index');
         } else {
-            echo('no');
+            $request->session()->flash('infoMessage', trans('user.login_fail'));
+
+            return redirect()->route('login-form');
         }
+    }
+
+    public function logOut()
+    {
+        Auth::logout();
+
+        return redirect()->route('login-form');
     }
 }

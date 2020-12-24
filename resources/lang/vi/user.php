@@ -19,5 +19,14 @@ return [
     'actions' => 'Hành động',
     'add_button' => 'Thêm người dùng',
     'filter' => 'Nhập tên tài khoản',
-
+    'name_form' => 'Form',
+    'add_submit_button' => 'Thêm mới',
+    'return' => 'Quay lại',
+    'create_user_success' => 'Tạo người dùng mới thành công',
+    'update_user_success' => 'Cập nhật người dùng thành công',
+    'delete_user_success' => 'Xóa người dùng thành công',
+    'isset_id' => 'Người dùng không tồn tại',
+    'isset_email' => 'Email đã tồn tại',
+    'post' => 'Bài viết',
+    'view_detail' => 'Xem chi tiết'
 ];

@@ -20,4 +20,14 @@ return [
     'actions' => 'Actions',
     'add_button' => 'Add information user',
     'filter' => 'Enter username',
+    'name_form' => 'Form',
+    'add_submit_button' => 'Add new user',
+    'return' => 'Return',
+    'create_user_success' => 'Create new user successfully',
+    'update_user_success' => 'Update user successfully',
+    'delete_user_success' => 'Delete user successfully',
+    'isset_id' => 'User does not exists',
+    'isset_email' => 'Email already exists',
+    'post' => 'Post',
+    'view_detail' => 'View detail'
 ];

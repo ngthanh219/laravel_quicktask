@@ -5,7 +5,7 @@
         <section class="content-header">
             <h1>{{ trans('user.users') }}</h1>
             <div class="timeline-footer mystyle">
-                <a href="#" class="btn btn-primary btn mystyle">
+                <a href="{{ route('user.create') }}" class="btn btn-primary btn mystyle">
                     <i class="fa fa-plus-square"></i> {{ trans('user.add_button') }}
                 </a>
             </div>
@@ -49,28 +49,32 @@
                             <table class="table table-hover text-center">
                                 <tbody>
                                     <tr>
-                                        <th>{{ trans('user.username') }}</th>
-                                        <th>{{ trans('user.name') }}</th>
                                         <th>{{ trans('user.email') }}</th>
+                                        <th>{{ trans('user.name') }}</th>
+                                        <th>{{ trans('user.post') }}</th>
                                         <th>{{ trans('user.actions') }}</th>
                                     </tr>
-                                    <tr>
-                                        <td>123</td>
-                                        <td>123</td>
-                                        <td>123</td>
-                                        <td class="td mystyle">
-                                            <a href="#">
-                                                <i class="fa fa-pencil"></i>
-                                            </a>
-                                            <form action="#" method="POST" class="delete-form mystyle">
-                                                @method('DELETE')
-                                                @csrf
-                                                <button type="submit">
-                                                    <i class="fa fa-trash"></i>
-                                                </button>
-                                            </form>
-                                        </td>
-                                    </tr>
+                                    @foreach ($users as $user)
+                                        <tr>
+                                            <td>{{ $user->email }}</td>
+                                            <td>{{ $user->name }}</td>
+                                            <td>
+                                                <a href="#" class="btn btn-info">{{ trans('user.view_detail') }}</a>
+                                            </td>
+                                            <td class="td mystyle">
+                                                <a href="{{ route('user.edit', $user->id) }}">
+                                                    <i class="fa fa-pencil"></i>
+                                                </a>
+                                                <form action="{{ route('user.destroy', $user->id) }}" method="POST" class="delete-form mystyle">
+                                                    @method('DELETE')
+                                                    @csrf
+                                                    <button type="submit">
+                                                        <i class="fa fa-trash"></i>
+                                                    </button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                             <div class="col-sm-12 text-right">

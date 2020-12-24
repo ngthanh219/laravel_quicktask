@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ asset('css/login.css') }}">
-    <title>Document</title>
+    <title>{{ trans('user.login_form') }}</title>
 </head>
 <body>
     <div class="components">
@@ -25,32 +25,36 @@
                                 <div class="form-col">
                                     <div class="form-row">
                                         <div class="row-input">
-                                            <input type="email" class="text-key" placeholder="email" name="email" />
+                                            <input type="email" class="text-key" placeholder="{{ trans('user.email') }}" name="email" />
                                         </div>
                                     </div>
                                     @if($errors->has('email'))
-                                        <div class="error"><p>{{ $errors->first('email') }}</p></div>
+                                        <div class="error">
+                                            <p>{{ $errors->first('email') }}</p>
+                                        </div>
                                     @endif
                                     <div class="form-row">
                                         <div class="row-input">
-                                            <input type="password" class="text-key" placeholder="password" name="password" />
+                                            <input type="password" class="text-key" placeholder="{{ trans('user.password') }}" name="password" />
                                         </div>
                                     </div>
                                     @if($errors->has('password'))
                                         <div class="error"><p>{{ $errors->first('password') }}</p></div>
                                     @endif
                                     <div class="form-row under-input">
-                                        <button type="submit">Log In</button>
+                                        <button type="submit">{{ trans('user.button_login') }}</button>
                                     </div>
                                     <div class="option-or">
                                         <div class="bar1"></div>
-                                        <div class="option">or</div>
+                                        <div class="option">{{ trans('user.or') }}</div>
                                         <div class="bar1"></div>
                                     </div>
-                                    <div class="error">
-                                        <p>123</p>
-                                    </div>
-                                    <a class="forgot-pw" title="">Forgot password?</a>
+                                    @if (session()->has('infoMessage'))
+                                        <div class="error">
+                                            <p>{{ session()->get('infoMessage') }}</p>
+                                        </div>
+                                    @endif
+                                    <a class="forgot-pw" title="">{{ trans('user.forgot_password') }}?</a>
                                 </div>
                             </form>
                         </div>

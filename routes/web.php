@@ -13,11 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-Route::group(['namespace' => 'App\Http\Controllers'], function() {
+Route::group(['namespace' => 'App\Http\Controllers'], function () {
     Route::get('/', 'LoginController@index')->name('login-form');
     Route::post('check-login', 'LoginController@checkLogin')->name('check-login');
+    Route::get('log-out', 'LoginController@logOut')->name('log-out');
+    Route::middleware('check.login')->group(function () {
+        Route::resource('user', 'UserController');
+    });
 });

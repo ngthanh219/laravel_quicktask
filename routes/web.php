@@ -18,6 +18,9 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
     Route::post('check-login', 'LoginController@checkLogin')->name('check-login');
     Route::get('log-out', 'LoginController@logOut')->name('log-out');
     Route::middleware('check.login')->group(function () {
-        Route::resource('user', 'UserController');
+        Route::resources([
+            'user' => 'UserController',
+            'image' => 'ImageController'
+        ]);
     });
 });

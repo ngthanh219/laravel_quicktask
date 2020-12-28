@@ -23,6 +23,20 @@
                 </a>
                 <div class="navbar-custom-menu">
                     <ul class="nav navbar-nav">
+                        <li class="dropdown tasks-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-language"></i>
+                                <span class="label label-danger">2</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <ul class="menu">
+                                        <li><a href="#">Vietnamese</a></li>
+                                        <li><a href="#">English</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <img src="{{ asset('assets/dist/img/iconUser.png') }}" class="user-image" alt="User Image">
@@ -54,15 +68,15 @@
             <section class="sidebar">
                 <ul class="sidebar-menu" data-widget="tree">
                     <li>
-                        <a href="#">
+                        <a href="{{ route('user.index') }}">
                             <i class="fa fa-user"></i>
                             <span>{{ trans('user.users_manager') }}</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="{{ route('image.index') }}">
                             <i class="fa fa-list-ul"></i>
-                            <span>{{ trans('user.users_manager') }}</span>
+                            <span>{{ trans('image.images_manager') }}</span>
                         </a>
                     </li>
                 </ul>

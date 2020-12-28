@@ -14,6 +14,7 @@ return [
     'users' => 'Người dùng',
     'list' => 'Danh sách',
     'username' => 'Tên tài khoản',
+    'password' => 'Mật khẩu',
     'name' => 'Tên người dùng',
     'email' => 'Email người dùng',
     'actions' => 'Hành động',

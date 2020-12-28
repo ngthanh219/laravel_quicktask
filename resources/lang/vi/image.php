@@ -5,6 +5,7 @@ return [
     'images' => 'Hình ảnh',
     'list' => 'Danh sách',
     'name' => 'Tên người dùng',
+    'image_current' => 'Ảnh hiện tại',
     'image' => 'Ảnh người dùng',
     'actions' => 'Hành động',
     'add_button' => 'Thêm ảnh mới',

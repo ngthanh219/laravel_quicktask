@@ -23,4 +23,5 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
             'image' => 'ImageController'
         ]);
     });
+    Route::get('languages/{language}', 'LocalizationController@index')->name('languages');
 });

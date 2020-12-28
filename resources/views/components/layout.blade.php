@@ -31,8 +31,8 @@
                             <ul class="dropdown-menu">
                                 <li>
                                     <ul class="menu">
-                                        <li><a href="#">Vietnamese</a></li>
-                                        <li><a href="#">English</a></li>
+                                        <li><a href="{{ route('languages', ['vi']) }}">Vietnamese</a></li>
+                                        <li><a href="{{ route('languages', ['en']) }}">English</a></li>
                                     </ul>
                                 </li>
                             </ul>
